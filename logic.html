@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="logic.css">
+ 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forex Prophet</title>
+</head>
+<body>
+  <header>
+  
+    <h1 class="glowing">Pin bar Prophet</h1>
+    <h2>A qualified bullish pin bar forms in the buy zone of the Bollinger Band, and the qualified bearish pin bar forms in the sell zone of the Bollinger Band.</h2>
+  </header>
+  <form id="currencyForm">
+    <p id="question"></p>
+    <label>
+      <input type="radio" name="answer" id="yes">
+      Yes, it is a pin bar
+    </label>
+    <label>
+      <input type="radio" name="answer" id="no">
+      No, it is not a pin bar
+    </label>
+    <div id="pinBarOptions" style="display: none;">
+      <label>
+        <input type="radio" name="pinBarType" id="bullish">
+        Bullish Pin Bar
+      </label>
+      <label>
+        <input type="radio" name="pinBarType" id="bearish">
+        Bearish Pin Bar
+      </label>
+    </div>
+    <p id="validationMessage" style="color: red; display: none;">Please select Yes or No.</p>
+    <button class="cinematic-button" type="submit">Next</button>
+
+  </form>
+  
+  
+  <p id="resultMessage"></p>
+  <p id="winningMessage"></p>
+  <ul id="resultList"></ul>
+
+  <button id="resetButton" class="cinematic-button" type="button">Reset</button>
+
+
+  <footer>
+    <p class="footer-text">© 2023 Forex Prophet. All rights reserved.</p>
+  </footer>
+
+  <script src="logic.js"></script>
+
+</body>
+</html>

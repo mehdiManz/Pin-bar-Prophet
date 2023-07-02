@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+
+body {
+  font-family: 'Cinzel', serif;;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+ 
+  color: #000000; /* Adjust the color to a darker shade */
+  font-weight: bold;
+  background-color: #a4ae31;
+background-image: url("https://www.transparenttextures.com/patterns/scribble-light.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.form-input {
+  margin-right: 10px;
+}
+
+.form-radio-options {
+  margin-left: 20px;
+}
+
+.validation-message {
+  color: red;
+  display: none;
+  margin-top: 10px;
+}
+
+.submit-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4285f4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.result-message {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.result-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.result-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.result-item p {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4285f4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #f7ff00, 0 0 70px #f7ff00, 0 0 80px #f7ff00, 0 0 100px #f7ff00, 0 0 150px #f7ff00;
+  }
+  100% {
+    text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #f7ff00, 0 0 70px #f7ff00, 0 0 80px #f7ff00, 0 0 100px #f7ff00, 0 0 150px #f7ff00, 0 1 20px #f7ff00;
+  }
+}
+
+h1 {
+  font-size: 48px;
+  color: #8B0000; /* Deep Red */
+  text-align: center;
+  animation: glowing 5s infinite;
+  animation-delay: 60s;
+}
+/* Button Styles */
+/* Button Styles */
+.cinematic-button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #FFF;
+  border: 2px solid #FFF;
+  border-radius: 4px;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.cinematic-button:hover {
+  background-color: #FFF;
+  color: #000;
+}
+
+.cinematic-button:active {
+  transform: translateY(2px);
+}
+@keyframes outstanding-effect {
+  0% { color: #1100ff; text-shadow: 0 0 5px #FF9A00; }
+  50% { color: #0d0d0d; text-shadow: 0 0 10px #FFD700; }
+  100% { color: #ff0400; text-shadow: 0 0 15px #FF9A00; }
+}
+
+.outstanding-animation {
+  animation: outstanding-effect 5s infinite;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+@keyframes movieStyleAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shakeAnimation {
+  0%, 100% {
+    text-shadow: none;
+  }
+  5%, 25%, 45%, 65%, 85% {
+    text-shadow: -2px -2px 3px rgba(255, 255, 255, 0.5),
+                  2px 2px 3px rgba(0, 0, 0, 0.5);
+  }
+  15%, 35%, 55%, 75% {
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5),
+                  -2px -2px 3px rgba(0, 0, 0, 0.5);
+  }
+}
+
+h2 {
+  text-align: center;
+  position: relative;
+  font-size: 36px;
+  color: #333;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: movieStyleAnimation 1s forwards, shakeAnimation 5s infinite 30s;
+  text-shadow: -2px -2px 3px rgba(255, 255, 255, 0.5),
+               2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+.highlight {
+  animation: highlight 1.5s infinite alternate;
+}
+
+@keyframes highlight {
+  0% {
+    color: black;
+    background-color: yellow;
+  }
+  100% {
+    color: yellow;
+    background-color: black;
+  }
+}
