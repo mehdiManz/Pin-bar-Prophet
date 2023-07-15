@@ -163,6 +163,7 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let [currencyCode, { count, pairs }] of sortedCounts) {
       const listItem = document.createElement("li");
       listItem.textContent = `Currency: ${currencyCode}, Yes Count: ${count}`;
+      listItem.classList.add("currency-item");
   
       const pairsList = document.createElement("ul");
       for (let pairObj of pairs) {
@@ -173,6 +174,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
       listItem.appendChild(pairsList);
       resultList.appendChild(listItem);
+     
   
       if (count > highestCount) {
         highestCount = count;
@@ -215,3 +217,11 @@ document.addEventListener("DOMContentLoaded", function() {
     currencyForm.querySelector("button[type='submit']").disabled = false;
   }
 });
+
+
+
+
+
+
+
+
