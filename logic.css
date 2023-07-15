@@ -1,22 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
 
-
 body {
-  font-family: 'Cinzel', serif;;
+  font-family: 'Cinzel', serif;
   margin: 0;
+  height: 1500px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
- 
-  color: #000000; /* Adjust the color to a darker shade */
+  position: relative;
+  color: #000000;
   font-weight: bold;
-  background-color: #a4ae31;
-background-image: url("https://www.transparenttextures.com/patterns/scribble-light.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #51b9f9;
+  background-image: url("https://www.transparenttextures.com/patterns/scribble-light.png");
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 700px;
 }
 
 .container {
@@ -24,6 +28,29 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   padding: 20px;
   background-color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  height: 100vh;
+}
+
+.reset-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#resetButton {
+  position: fixed;
+  top: 30px;
+  left: 130px;
+}
+
+#currencyForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50px;
 }
 
 .form-label {
@@ -86,7 +113,17 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  position: absolute;
+  margin-top: 300px;
 }
+
+.reset-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 @keyframes glowing {
   0% {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #f7ff00, 0 0 70px #f7ff00, 0 0 80px #f7ff00, 0 0 100px #f7ff00, 0 0 150px #f7ff00;
@@ -98,13 +135,12 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
 h1 {
   font-size: 48px;
-  color: #8B0000; /* Deep Red */
+  color: #8B0000;
   text-align: center;
   animation: glowing 5s infinite;
   animation-delay: 60s;
 }
-/* Button Styles */
-/* Button Styles */
+
 .cinematic-button {
   padding: 10px 20px;
   background-color: #000;
@@ -129,6 +165,7 @@ h1 {
 .cinematic-button:active {
   transform: translateY(2px);
 }
+
 @keyframes outstanding-effect {
   0% { color: #1100ff; text-shadow: 0 0 5px #FF9A00; }
   50% { color: #0d0d0d; text-shadow: 0 0 10px #FFD700; }
@@ -157,12 +194,10 @@ h1 {
     text-shadow: none;
   }
   5%, 25%, 45%, 65%, 85% {
-    text-shadow: -2px -2px 3px rgba(255, 255, 255, 0.5),
-                  2px 2px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: -2px -2px 3px rgba(255, 255, 255, 0.5), 2px 2px 3px rgba(0, 0, 0, 0.5);
   }
   15%, 35%, 55%, 75% {
-    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5),
-                  -2px -2px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5), -2px -2px 3px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -174,9 +209,9 @@ h2 {
   opacity: 0;
   transform: translateX(-100%);
   animation: movieStyleAnimation 1s forwards, shakeAnimation 5s infinite 30s;
-  text-shadow: -2px -2px 3px rgba(255, 255, 255, 0.5),
-               2px 2px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: -2px -2px 3px rgba(255, 255, 255, 0.5), 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
+
 .highlight {
   animation: highlight 1.5s infinite alternate;
 }
@@ -190,4 +225,115 @@ h2 {
     color: yellow;
     background-color: black;
   }
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+#resultList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -500px;
+  
+}
+
+#resultList li {
+  flex: 0 0 auto;
+  margin: 10px;
+  padding: 10px;
+  background-color: #a71cd9;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(12, 42, 240, 0.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+#resultList li:hover {
+  transform: translateY(-5px);
+}
+
+#resultList li:nth-child(3n+1),
+#resultList li:nth-child(3n+2),
+#resultList li:nth-child(3n+3) {
+  background-color: #606260;
+  margin-left: -9px;
+  font-size: small;
+ 
+}
+
+#resultList li ul {
+  margin-top: 5px;
+  padding-left: 20px;
+  list-style: none;
+  background-color: #ffffff;
+}
+
+#resultList li ul li {
+  list-style: none;
+  background-color: #1100ff;
+}
+
+.highlight {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  color: #070707;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  background-color: #60a765;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+}
+
+.content {
+  margin-left: 320px;
+  padding: 20px;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+#resultMessage {
+  position: absolute;
+  text-align: center;
+  justify-items: center;
+  top: 250px;
+  left: 650px;
+}
+
+.currency-item {
+  text-align: center;
+  color: #000000;
+}
+
+.form-check-input {
+  width: 22px;
+  height: 22px;
+}
+
+
+#currencyForm .form-group label,
+#pinBarOptions label {
+  margin-top: 5px;
+  margin-left: 10px;
+ 
 }
